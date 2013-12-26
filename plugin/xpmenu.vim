@@ -1,3 +1,7 @@
+if !has('gui_running') 
+  finish
+endif
+
 let s:libfile = substitute(expand('<sfile>'), '.vim$', (has('win32')||has('win64'))?'.dll':'.so', '')
 
 " LoadLibrary : load {dllname} and return handle of library
